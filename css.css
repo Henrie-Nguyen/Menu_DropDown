@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root{
+    --primary: #399793;
+    --secondary: #2986ad;
+}
+.dropdown{
+    width: 100%;
+    max-width: 47.5rem;
+    margin: 5rem auto;
+    position: relative;
+}
+.dropdown_select{
+    font-family: calibri;
+    width: 100%;
+    padding: 3rem;
+    background-color: var(--primary);
+    border-radius: 4px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+
+
+
+}
+.dropdown_list{
+    margin-top: 2.5rem;
+    border-radius: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+}
+.dropdown_list:before{
+    content: "";
+    height: 2.5rem ;
+     
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transform: translateY(-100%);
+}
+.dropdown:hover .dropdown_list{
+    display: block;
+    
+}
+
+.dropdown_items{
+    font-family: calibri;
+    width: 100%;
+    padding: 3rem;
+    background-color: var(--primary);
+    border-radius: 4px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+
+}
+.dropdown_items:first-child{
+    border-radius: 4px 4px 0 0;
+    position: relative;
+}
+.dropdown_items:first-child:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 3rem;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent ;
+    border-bottom: 10px solid var(--primary);
+    transform: translateY(-100%);
+    transform: border-color 0.2s linear;
+}
+.dropdown_items:first-child:hover:before{
+   border-bottom-color: var(--secondary);
+}
+.dropdown_items:last-child{
+    border-radius: 0 0 4px 4px;
+}
+.dropdown_items:hover{
+    background-color: var(--secondary);
+}
